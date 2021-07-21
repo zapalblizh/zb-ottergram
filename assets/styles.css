@@ -1,6 +1,18 @@
 header, footer {
     margin: 0;
     padding: 8px 4px;
-    background: cornflowerblue
-;
+    background: cornflowerblue;
+    color: inherit;
 }
+
+.thumbnail-title {
+    display: block;
+    margin: 0;
+    padding: 4px 10px;
+
+    background: rgb(96,125,139);
+    color: rgb(202, 238, 255);
+}
+
+/* 21/7/21, 14:35 /*
+
