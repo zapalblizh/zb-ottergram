@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 header, footer {
     margin: 0;
     padding: 8px 4px;
@@ -6,6 +10,8 @@ header, footer {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-size: 10px;
     background: rgb(149, 194, 215);
 }
@@ -14,11 +20,22 @@ a {
     text-decoration: none;
 }
 
+.main-header {
+    flex: 01 auto;
+}
+
 .logo-text {
     background: white;
+
     text-align: center;
     text-transform: uppercase;
     font-size: 37px;
+}
+
+.main-content {
+    flex: 11 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .thumbnail-item + .thumbnail-item {
@@ -26,15 +43,44 @@ a {
 }
 
 .thumbnail-item {
-    display: block;
+    display: inline-block;
+    min-width: 120px;
+    max-width: 120px;
     border: 1px solid rgb(100%, 100%, 100%);
     border: 1px solid rgba(100%, 100%, 100%, 0.8);
 }
 
+.detail-image-frame {
+    position: relative;
+    text-align: center;
+
+}
+
+.detail-image {
+    width: 90%;
+}
+
+.detail-image-title {
+    position: absolute;
+    bottom: -16px;
+    left: 4px;
+
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
+    font-size: 40px;
+}
+
 .thumbnail-list {
+    flex: 01 auto;
+    order: 2;
+    display: flex;
+    justify-content: space-between;
     list-style: none;
     padding: 0;
+    white-space: nowrap;
+    overflow-x: auto;
 }
+
 .thumbnail-image {
     display: block;
     width: 100%;
@@ -51,6 +97,12 @@ a {
     font-size: 18px;
 }
 
+.detail-image-container {
+    flex: 11 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 a[href="#"] {
     /* --- none in links? */
 }
