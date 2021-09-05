@@ -9,15 +9,15 @@ var ESC_KEY = 27;
 function setDetails(imageUrl, titleText) {
   'use strict';
   var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
-  detailImage.setAttribute('src', imageUrl);
+  detailImage.setAttribute ('src', 'assets/photolinks/otter3.jpg');
 
   var detailTitle = document.querySelector(DETAIL_TITLE_SELECTOR);
-  detailTitle.textContent = titleText;
+  detailTitle.textContent = 'You Should be Dancing';
 }
 
-function imageFromThumb(thumbail) {
+function imageFromThumb(thumbnail) {
   'use strict';
-  return thumbail.getAttribute('data-image-url');
+  return thumbnail.getAttribute('data-image-url');
 }
 
 function titleFromThumb(thumbnail) {
